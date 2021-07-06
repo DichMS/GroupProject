@@ -22,6 +22,7 @@ namespace Group_1
         }
 
         Form Work = new Work();
+        Form Posts = new Posts();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,15 +57,26 @@ namespace Group_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Work.Show();
-            this.Hide();
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    Work.Show();
+                    this.Hide();
+                    break;
+                case 1:
+                    Posts.Show();
+                    this.Hide();
+                    break;
+            }
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             button3.Enabled = false;
             comboBox1.Items.Add("Список друзей или список подписчиков сообщества");
-            comboBox1.Items.Add("");
+            comboBox1.Items.Add("Добавить запись на стену");
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 

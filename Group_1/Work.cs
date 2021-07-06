@@ -48,21 +48,28 @@ namespace Group_1
                     var get_Friends = api_user.Friends.Get(new ReqPar.FriendsGetParams
                     { Fields = VkNet.Enums.Filters.ProfileFields.All });
                     foreach (User user in get_Friends)
-                        listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
+                        listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes($"{user.FirstName} {user.LastName} {user.Sex} {user.BirthDate}")));
                     break;
                 case 1:
                     api_group.Authorize(new ApiAuthParams
                     { AccessToken = Auth.getAuthForGroups() });
-                    var getFollowers = api_group.Groups.GetMembers(new ReqPar.GroupsGetMembersParams() { GroupId = "204320459", Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl });
+                    var getFollowers = api_group.Groups.GetMembers(new ReqPar.GroupsGetMembersParams() 
+                    { GroupId = "204320459", Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl });
                     foreach (User user in getFollowers)
-                        listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
+                        listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes($"{user.FirstName} {user.LastName} {user.Sex} {user.BirthDate}")));
                     break;
             }
+
         }
 
         private void Work_FormClosed(object sender, FormClosedEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void Check()
+        {
+
         }
     }
 }
