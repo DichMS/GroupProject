@@ -36,16 +36,20 @@ namespace Group_1
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FloralWhite;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(556, 34);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(258, 24);
+            this.comboBox1.Size = new System.Drawing.Size(258, 26);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(556, 544);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(556, 538);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(258, 44);
             this.button1.TabIndex = 2;
@@ -55,6 +59,7 @@ namespace Group_1
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.FloralWhite;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(12, 34);
@@ -66,6 +71,7 @@ namespace Group_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(826, 601);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);

@@ -37,6 +37,8 @@ namespace Group_1
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(46, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 74);
@@ -47,6 +49,8 @@ namespace Group_1
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(337, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 74);
@@ -57,9 +61,11 @@ namespace Group_1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(187, 341);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(175, 341);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 74);
+            this.button3.Size = new System.Drawing.Size(207, 74);
             this.button3.TabIndex = 4;
             this.button3.Text = "Переход на форму";
             this.button3.UseVisualStyleBackColor = true;
@@ -67,11 +73,13 @@ namespace Group_1
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.BackColor = System.Drawing.Color.FloralWhite;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 114);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(537, 28);
+            this.comboBox1.Size = new System.Drawing.Size(537, 30);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -79,6 +87,7 @@ namespace Group_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(561, 427);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);

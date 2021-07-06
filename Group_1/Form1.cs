@@ -23,6 +23,8 @@ namespace Group_1
 
         Form Work = new Work();
         Form Posts = new Posts();
+        Form Ages = new Ages();
+        Form Groups = new Groups();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -67,9 +69,16 @@ namespace Group_1
                     Posts.Show();
                     this.Hide();
                     break;
+                case 2:
+                    Ages.Show();
+                    this.Hide();
+                    break;
+                case 3:
+                    Groups.Show();
+                    this.Hide();
+                    break;
+
             }
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -77,6 +86,8 @@ namespace Group_1
             button3.Enabled = false;
             comboBox1.Items.Add("Список друзей или список подписчиков сообщества");
             comboBox1.Items.Add("Добавить запись на стену");
+            comboBox1.Items.Add("Узнать возраст пользователя");
+            comboBox1.Items.Add("Вывести публикации группы");
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 

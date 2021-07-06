@@ -44,27 +44,18 @@ namespace Group_1
             {
                 Console.WriteLine(z.Message);
             }
-            var getFollowers = vk.Groups.GetMembers(new ReqPar.GroupsGetMembersParams()
-            { GroupId = "204320459", Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl });
-            foreach (User user in getFollowers)
-            {
-                listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes($"{user.FirstName} {user.LastName}")));
-                listBox2.Items.Add(user.Id);
-            }
-            for (int i = 0; i < listBox2.Items.Count; i++)
-            {
-                System.Threading.Thread.Sleep(10);
-                var get = vk.Wall.Get(new ReqPar.WallGetParams { OwnerId = Convert.ToInt32(listBox2.Items[i]), Extended = true, Count = 1, });
-                vk.Wall.Post(new ReqPar.WallPostParams { OwnerId = OwnID, FromGroup = true, Attachments});
-                //vk.Wall.Repost(new ReqPar. get.WallPosts[0].ToString(), textBox1.Text, -1*OwnID, true);Message =  get.WallPosts[0].ToString()
-            }
-            //vk.Wall.Post(new ReqPar.WallPostParams { OwnerId = OwnID, FromGroup = true,  Message = "Мастер" }); Convert.ToInt32(listBox2.Items[i])
+            vk.Wall.Post(new ReqPar.WallPostParams { OwnerId = OwnID, FromGroup = true,  Message = textBox1.Text });
             sr.Close();
         }
 
         private void Posts_FormClosed(object sender, FormClosedEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void Posts_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

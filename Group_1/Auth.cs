@@ -15,7 +15,7 @@ namespace Group_1
         public static string getAuthForUsers()
         {
             string token = "";
-            string fileName = "C://Users/Dusha/Desktop/auth_vk.txt";
+            string fileName = "C://Users/Dusha/Desktop/auth_vk.txt"; // файл с токенами
             try
             {
                 using (StreamReader sr = new StreamReader(fileName))
