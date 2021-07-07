@@ -25,11 +25,11 @@ namespace Group_1
         private void button1_Click(object sender, EventArgs e)
         {
             var vk = new VkApi();
-            StreamReader sr = new StreamReader("C://Users/Dusha/Desktop/parametrs.txt");
-            ulong appID = ulong.Parse(sr.ReadLine());                      
-            string email = sr.ReadLine();
-            string pass = sr.ReadLine();
-            var OwnID = Convert.ToInt64(-204320459);
+            StreamReader sr = new StreamReader("C://Users/Dusha/Desktop/parametrs.txt"); // файл с данными от вк
+            ulong appID = ulong.Parse(sr.ReadLine()); //7895813 — ID приложения 
+            string email = sr.ReadLine(); // логин от аккаунта вк
+            string pass = sr.ReadLine(); // пароль от аккаунта вк
+            var OwnID = Convert.ToInt64(-204320459); // ID группы
             var auth = new ApiAuthParams();
             Settings scope = Settings.All;
             auth.Login = email;

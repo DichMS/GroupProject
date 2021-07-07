@@ -48,7 +48,7 @@ namespace Group_1
                     var get_Friends = api_user.Friends.Get(new ReqPar.FriendsGetParams
                     { Fields = VkNet.Enums.Filters.ProfileFields.All });
                     foreach (User user in get_Friends)
-                        listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes($"{user.FirstName} {user.LastName} {user.Sex} {user.BirthDate}")));
+                        listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes($"{user.FirstName} {user.LastName} {user.Sex} {user.BirthDate} {user.Id}")));
                     break;
                 case 1:
                     api_group.Authorize(new ApiAuthParams
